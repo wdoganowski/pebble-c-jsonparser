@@ -100,7 +100,7 @@ void json_parser_test(void) {
 */
   JSP_ErrorType error;
 
-  json_register_callbalc(object_callback, array_callback);
+  json_register_callbacks(object_callback, array_callback);
   error = json_parser(json_ok);
   APP_LOG(APP_LOG_LEVEL_DEBUG, "Result 0x%x\n", error);
 
