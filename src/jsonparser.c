@@ -354,14 +354,14 @@ static JSP_ErrorType json_array_parser(char** json) {
   return JSP_OK;
 }
 
-JSP_ErrorType json_register_callbalc(JSP_ObjectCallback object_callback, JSP_ArrayCallback array_callback) {
+JSP_ErrorType json_register_callbacks(JSP_ObjectCallback object_callback, JSP_ArrayCallback array_callback) {
   object_callback_ptr = object_callback;
   array_callback_ptr = array_callback;
   return JSP_OK;
 }
 
-JSP_ErrorType json_parser(char* json_in) {
-  char* json = json_in;
+JSP_ErrorType json_parser(const char* json_in) {
+  char* json = (char*) json_in;
   if (!json) return JSP_ERROR_NULL_INPUT;
   switch (json_value_type(json)) {
     case JSP_VALUE_OBJECT: return json_object_parser(&json);

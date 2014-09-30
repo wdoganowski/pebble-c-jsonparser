@@ -66,7 +66,7 @@ void array_callback(JSP_ValueType type, char* value, uint16_t value_length) {
 
  */
 
-JSP_ErrorType json_parser(char* json_in);
+JSP_ErrorType json_parser(const char* json_in);
 
 /*
  * The call back type (see example above)
@@ -81,5 +81,5 @@ typedef void (*JSP_ArrayCallback)(JSP_ValueType type, char* value, uint16_t valu
  * Two argument are the callback functions or null if the callback should be deregistered
  */
 
-JSP_ErrorType json_register_callbalc(JSP_ObjectCallback object_callback, JSP_ArrayCallback array_callback);
+JSP_ErrorType json_register_callbacks(JSP_ObjectCallback object_callback, JSP_ArrayCallback array_callback);
 
