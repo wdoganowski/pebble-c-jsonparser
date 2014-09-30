@@ -1,0 +1,17 @@
+{
+  "uuid": "20184c6b-b276-4f1c-a22f-234a9d63da66",
+  "shortName": "jsonparser",
+  "longName": "jsonparser",
+  "companyName": "Dogan",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
